@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: go-pod
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  template:
+    metadata:
+      labels:
+        name: go-pod
+    spec:
+      containers:
+        - name: go-pod-container
+          image: morphological-analysis
+          ports:
+            - containerPort: 8080
