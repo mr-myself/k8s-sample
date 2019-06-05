@@ -1,14 +1,19 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-pod
+  name: go-deployment
+  labels:
+    app: go-deployment
 spec:
   replicas: 2
   revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: go-pod
   template:
     metadata:
       labels:
-        name: go-pod
+        app: go-pod
     spec:
       containers:
         - name: go-pod-container
