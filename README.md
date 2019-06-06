@@ -8,6 +8,14 @@ So basically, what we need to do is to run the below command.
 ```
 $ skaffold dev
 ```
+## Preparation
+
+To add `ingress-nginx`, you need to run the below commands.
+```
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.24.1/deploy/mandatory.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.24.1/deploy/provider/cloud-generic.yaml
+```
+
 
 ## Dashboard
 If you would like to see the current status of k8s, the dashboard can help you.
@@ -24,3 +32,5 @@ $ kubectl proxy
 
 Then access to the below link. Please choose the "Token" method and paste the one you got from above command.
 http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=default
+
+
