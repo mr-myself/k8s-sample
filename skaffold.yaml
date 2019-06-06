@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta11
 kind: Config
 build:
   artifacts:
-    - image: morphological-analysis
+    - image: go-sample
 deploy:
   kubectl:
     manifests:

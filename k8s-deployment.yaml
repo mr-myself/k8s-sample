@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: go-pod-container
-          image: morphological-analysis
+          image: go-sample
           ports:
             - containerPort: 8080
